@@ -11,13 +11,13 @@ Spring 프레임워크를 사용하여 반응형 애플리케이션을 구축하
 
 
 ## **🎯 Learning Goals**
-- Reactive Programming 개념 및 원칙에 대한 깊은 이해. \
-- Reactive 데이터 파이프라인을 생성하기 위해 Reactor 라이브러리를 효과적으로 사용하는 방법 학습. \
-- Spring Boot와 WebFlux를 사용하여 Reactive 웹 애플리케이션 구축. \
-- R2DBC와 Spring Data JPA를 사용하여 Reactive 데이터 액세스 통합. \
-- 캐싱 및 데이터 저장을 위한 Reactive Redis 활용. \
-- Reactive 애플리케이션에서 Spring Security를 사용한 인증 및 권한 부여 구현. \
-- Actuator를 사용하여 Reactive 애플리케이션 모니터링 및 관리. \
+- Reactive Programming 개념 및 원칙에 대한 깊은 이해.
+- Reactive 데이터 파이프라인을 생성하기 위해 Reactor 라이브러리를 효과적으로 사용하는 방법 학습.
+- Spring Boot와 WebFlux를 사용하여 Reactive 웹 애플리케이션 구축.
+- R2DBC와 Spring Data JPA를 사용하여 Reactive 데이터 액세스 통합. 
+- 캐싱 및 데이터 저장을 위한 Reactive Redis 활용.
+- Reactive 애플리케이션에서 Spring Security를 사용한 인증 및 권한 부여 구현.
+- Actuator를 사용하여 Reactive 애플리케이션 모니터링 및 관리.
 
 ## **📚 학습을 위한 기능**
 
