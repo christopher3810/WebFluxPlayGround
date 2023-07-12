@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Google",
+    "industry": "Technology",
+    "headquarters": "Mountain View, California, United States",
+    "ceo": "Sundar Pichai",
+    "founded": "1998"
+  },
+  {
+    "name": "Microsoft",
+    "industry": "Technology",
+    "headquarters": "Redmond, Washington, United States",
+    "ceo": "Satya Nadella",
+    "founded": "1975"
+  },
+  // 다른 주식 정보
+]
