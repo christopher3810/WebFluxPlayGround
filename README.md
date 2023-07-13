@@ -24,3 +24,26 @@ Spring 프레임워크를 사용하여 반응형 애플리케이션을 구축하
 3.  **Reactive Redis**: 분산 시스템에서 Reactive 프로그래밍 활용을 보여주기 위해 데이터 저장 및 캐싱 메커니즘으로 Reactive Redis 통합
 4.  **Reactive Spring Security**: Reactive 패러다임에 적합한 인증 및 권한 부여 구현을 위해 Spring Security 적용 방법 탐구
 5.  **Actuator**: Reactive 시스템의 특별한 요구사항과 과제에 초점을 맞춰 Spring Boot Actuator를 활용하여 Reactive 애플리케이션 모니터링 및 관리 방법 연구
+
+## 📦 Running Redis with Docker or Podman
+이 프로젝트는 데이터 저장 및 캐싱에 Reactive Redis를 사용합니다.
+
+이 프로젝트를 정상적으로 실행하려면 Redis 인스턴스가 필요합니다. 
+
+아래의 명령어를 사용하여 Docker 또는 Podman으로 Redis를 로컬에 실행할 수 있습니다.
+
+**Docker를 사용하여 Redis 실행하기**
+
+```bash
+docker run --name some-redis -p 6379:6379 -d redis:latest
+```
+
+**Podman을 사용하여 Redis 실행하기:**
+
+```bash
+podman run --name some-redis -p 6379:6379 -d docker.io/library/redis:latest
+```
+
+-p 6379:6379 : 호스트의 6379 포트를 컨테이너의 6379 포트에 바인딩하는 부분이 중요합니다. 
+
+해당 프로젝트의 application.yml 설정값에 redis port 값과 일치시켜줘야 합니다.
