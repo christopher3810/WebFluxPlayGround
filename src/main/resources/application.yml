@@ -3,7 +3,10 @@ spring:
     redis:
       host: localhost
       port: 6379
+  security:
+    user:
+      name: admin
+      password: 1234
 
 app:
-  base-url: http://localhost:18050
-
+  base-url: http://localhost:8080
