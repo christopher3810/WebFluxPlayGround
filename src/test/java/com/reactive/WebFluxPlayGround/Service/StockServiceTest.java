@@ -30,7 +30,6 @@ class StockServiceTest {
         // Mock JsonUtils
         Mockito.when(resourceLoader.getResource(Mockito.anyString())).thenReturn(resource);
 
-        //tc 수정해야됨.
         Mockito.when(JsonUtils.readFromJson(resourceLoader, "classpath:stocks.json", new TypeToken<List<Stock>>(){}))
             .thenReturn(testData);
 
