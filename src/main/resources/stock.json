@@ -1,17 +1,223 @@
 [
   {
-    "name": "Google",
+    "name": "Apple Inc.",
     "industry": "Technology",
-    "headquarters": "Mountain View, California, United States",
-    "ceo": "Sundar Pichai",
-    "founded": "1998"
+    "headquarters": "Cupertino, California, United States",
+    "ceo": "Tim Cook",
+    "founded": "1976",
+    "marketCap": "2.3T",
+    "lastPrice": "$150",
+    "lastRSI": "70",
+    "lastMoneyFlow": "30M"
   },
   {
-    "name": "Microsoft",
+    "name": "Microsoft Corporation",
     "industry": "Technology",
     "headquarters": "Redmond, Washington, United States",
     "ceo": "Satya Nadella",
-    "founded": "1975"
+    "founded": "1975",
+    "marketCap": "2T",
+    "lastPrice": "$290",
+    "lastRSI": "67",
+    "lastMoneyFlow": "25M"
   },
-  // 다른 주식 정보
+
+  {
+    "name": "Alphabet Inc.",
+    "industry": "Technology",
+    "headquarters": "Mountain View, California, United States",
+    "ceo": "Sundar Pichai",
+    "founded": "2015",
+    "marketCap": "1.5T",
+    "lastPrice": "$2500",
+    "lastRSI": "65",
+    "lastMoneyFlow": "23M"
+  },
+  {
+    "name": "Amazon.com, Inc.",
+    "industry": "E-commerce",
+    "headquarters": "Seattle, Washington, United States",
+    "ceo": "Andy Jassy",
+    "founded": "1994",
+    "marketCap": "1.7T",
+    "lastPrice": "$3300",
+    "lastRSI": "67",
+    "lastMoneyFlow": "22M"
+  },
+  {
+    "name": "NVIDIA Corporation",
+    "industry": "Technology",
+    "headquarters": "Santa Clara, California, United States",
+    "ceo": "Jensen Huang",
+    "founded": "1993",
+    "marketCap": "500B",
+    "lastPrice": "$750",
+    "lastRSI": "70",
+    "lastMoneyFlow": "18M"
+  },
+  {
+    "name": "Meta Platforms, Inc.",
+    "industry": "Technology",
+    "headquarters": "Menlo Park, California, United States",
+    "ceo": "Mark Zuckerberg",
+    "founded": "2004",
+    "marketCap": "1T",
+    "lastPrice": "$330",
+    "lastRSI": "60",
+    "lastMoneyFlow": "20M"
+  },
+  {
+    "name": "Tesla, Inc.",
+    "industry": "Automotive",
+    "headquarters": "Palo Alto, California, United States",
+    "ceo": "Elon Musk",
+    "founded": "2003",
+    "marketCap": "800B",
+    "lastPrice": "$1100",
+    "lastRSI": "75",
+    "lastMoneyFlow": "25M"
+  },
+  {
+    "name": "PepsiCo, Inc.",
+    "industry": "Beverages",
+    "headquarters": "Purchase, New York, United States",
+    "ceo": "Ramón Laguarta",
+    "founded": "1965",
+    "marketCap": "200B",
+    "lastPrice": "$150",
+    "lastRSI": "60",
+    "lastMoneyFlow": "15M"
+  },
+  {
+    "name": "Broadcom Inc.",
+    "industry": "Semiconductors",
+    "headquarters": "San Jose, California, United States",
+    "ceo": "Hock Tan",
+    "founded": "1961",
+    "marketCap": "190B",
+    "lastPrice": "$480",
+    "lastRSI": "55",
+    "lastMoneyFlow": "16M"
+  },
+  {
+    "name": "ASML Holding N.V.",
+    "industry": "Semiconductors",
+    "headquarters": "Veldhoven, Netherlands",
+    "ceo": "Peter Wennink",
+    "founded": "1984",
+    "marketCap": "250B",
+    "lastPrice": "$700",
+    "lastRSI": "65",
+    "lastMoneyFlow": "18M"
+  },
+  {
+    "name": "AstraZeneca PLC",
+    "industry": "Pharmaceuticals",
+    "headquarters": "Cambridge, England, United Kingdom",
+    "ceo": "Pascal Soriot",
+    "founded": "1999",
+    "marketCap": "140B",
+    "lastPrice": "$58",
+    "lastRSI": "55",
+    "lastMoneyFlow": "12M"
+  },
+  {
+    "name": "Costco Wholesale Corporation",
+    "industry": "Retail",
+    "headquarters": "Issaquah, Washington, United States",
+    "ceo": "W. Craig Jelinek",
+    "founded": "1983",
+    "marketCap": "160B",
+    "lastPrice": "$380",
+    "lastRSI": "60",
+    "lastMoneyFlow": "15M"
+  },
+  {
+    "name": "Cisco Systems, Inc.",
+    "industry": "Technology",
+    "headquarters": "San Jose, California, United States",
+    "ceo": "Chuck Robbins",
+    "founded": "1984",
+    "marketCap": "220B",
+    "lastPrice": "$55",
+    "lastRSI": "57",
+    "lastMoneyFlow": "16M"
+  },
+  {
+    "name": "Comcast Corporation",
+    "industry": "Telecommunications",
+    "headquarters": "Philadelphia, Pennsylvania, United States",
+    "ceo": "Brian L. Roberts",
+    "founded": "1963",
+    "marketCap": "260B",
+    "lastPrice": "$58",
+    "lastRSI": "58",
+    "lastMoneyFlow": "20M"
+  },
+  {
+    "name": "T-Mobile US, Inc.",
+    "industry": "Telecommunications",
+    "headquarters": "Bellevue, Washington, United States",
+    "ceo": "Mike Sievert",
+    "founded": "1994",
+    "marketCap": "170B",
+    "lastPrice": "$135",
+    "lastRSI": "62",
+    "lastMoneyFlow": "14M"
+  },
+  {
+    "name": "Adobe Inc.",
+    "industry": "Software",
+    "headquarters": "San Jose, California, United States",
+    "ceo": "Shantanu Narayen",
+    "founded": "1982",
+    "marketCap": "310B",
+    "lastPrice": "$550",
+    "lastRSI": "65",
+    "lastMoneyFlow": "19M"
+  },
+  {
+    "name": "Texas Instruments Incorporated",
+    "industry": "Semiconductors",
+    "headquarters": "Dallas, Texas, United States",
+    "ceo": "Rich Templeton",
+    "founded": "1930",
+    "marketCap": "180B",
+    "lastPrice": "$190",
+    "lastRSI": "63",
+    "lastMoneyFlow": "16M"
+  },
+  {
+    "name": "Netflix, Inc.",
+    "industry": "Entertainment",
+    "headquarters": "Los Gatos, California, United States",
+    "ceo": "Reed Hastings",
+    "founded": "1997",
+    "marketCap": "240B",
+    "lastPrice": "$550",
+    "lastRSI": "67",
+    "lastMoneyFlow": "20M"
+  },
+  {
+    "name": "Sanofi S.A.",
+    "industry": "Pharmaceuticals",
+    "headquarters": "Paris, France",
+    "ceo": "Paul Hudson",
+    "founded": "1973",
+    "marketCap": "130B",
+    "lastPrice": "$95",
+    "lastRSI": "55",
+    "lastMoneyFlow": "12M"
+  },
+  {
+    "name": "Honeywell International Inc.",
+    "industry": "Industrial Conglomerate",
+    "headquarters": "Charlotte, North Carolina, United States",
+    "ceo": "Darius Adamczyk",
+    "founded": "1906",
+    "marketCap": "150B",
+    "lastPrice": "$230",
+    "lastRSI": "62",
+    "lastMoneyFlow": "12M"
+  }
 ]
