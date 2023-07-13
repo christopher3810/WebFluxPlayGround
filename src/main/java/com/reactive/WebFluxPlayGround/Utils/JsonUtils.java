@@ -9,6 +9,13 @@ import java.lang.reflect.Type;
 import java.util.List;
 import org.springframework.core.io.ResourceLoader;
 
+/**
+ * JsonUtils는 JSON 파일에서 읽어오는 메소드를 제공하는 유틸리티 클래스입니다.
+ *
+ * 이 어플리케이션에서는 초기 데이터를 JSON 파일에서 읽어와 애플리케이션에 로드하는 데 사용됩니다.
+ * JSON을 파싱하고 이를 Java 객체로 변환하기 위해 Gson 라이브러리를 사용합니다.
+ * JSON 데이터를 Java 객체로 파싱해야 하는 경우에는 언제든지 사용해야 합니다.
+ */
 public class JsonUtils {
 
     private static final Gson gson = new Gson();

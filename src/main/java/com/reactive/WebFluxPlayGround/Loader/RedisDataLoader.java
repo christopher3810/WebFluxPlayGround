@@ -8,7 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.core.io.ResourceLoader;
-import org.springframework.data.redis.core.ReactiveRedisTemplate;
+import org.springframework.data.redis.core.ReactiveValueOperations;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -16,12 +16,12 @@ import org.springframework.stereotype.Component;
 public class RedisDataLoader {
 
     private final ResourceLoader resourceLoader;
-    private final ReactiveRedisTemplate<String, Stock> reactiveRedisTemplate;
+    private final ReactiveValueOperations<String, Stock> reactiveValueOps;
 
     @EventListener(ApplicationReadyEvent.class)
-    public void loadData(){
-        List<Stock> stockList = JsonUtils.readFromJson(resourceLoader, "classpath:stocks.json", new TypeToken<List<Stock>>(){});
-        stockList.forEach(stock -> reactiveRedisTemplate.opsForHash().put("stocks", stock.getName(), stock).subscribe());
+    public void loadData()  {
+        List<Stock> stockList = JsonUtils.readFromJson(resourceLoader, "classpath:stock.json", new TypeToken<List<Stock>>(){});
+        stockList.forEach(stock -> reactiveValueOps.set("stock:" + stock.getName(), stock).subscribe());
     }
 
 }

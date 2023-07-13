@@ -1,8 +1,9 @@
-app:
-  base-url: http://localhost:8080
-
 spring:
   data:
     redis:
       host: localhost
-      port: 18001
+      port: 6379
+
+app:
+  base-url: http://localhost:18050
+

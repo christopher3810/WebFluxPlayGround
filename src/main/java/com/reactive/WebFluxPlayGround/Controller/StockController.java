@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @RestController
 @RequiredArgsConstructor
@@ -14,13 +15,13 @@ public class StockController {
 
     private final StockService stockService;
 
-    @GetMapping("/stocks")
-    public Flux<Stock> getStocks() {
+    @GetMapping("")
+    public Flux<Stock> getAllStocks() {
         return stockService.getStocks();
     }
 
-    @GetMapping("/stocks/{name}")
-    public Flux<Stock> getStockByName(@PathVariable String name) {
+    @GetMapping("/{name}")
+    public Mono<Stock> getStockByName(@PathVariable String name) {
         return stockService.getStockByName(name);
     }
 }
