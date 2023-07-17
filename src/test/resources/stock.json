@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Test Stock",
+    "industry": "Test Industry",
+    "headquarters": "Test Headquarters",
+    "ceo": "Test CEO",
+    "founded": "Test Founded",
+    "marketCap": "Test MarketCap",
+    "lastPrice": "Test LastPrice",
+    "lastRSI": "Test LastRSI",
+    "lastMoneyFlow": "Test LastMoneyFlow"
+  }
+]
