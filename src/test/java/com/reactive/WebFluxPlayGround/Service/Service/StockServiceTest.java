@@ -1,9 +1,12 @@
 package com.reactive.WebFluxPlayGround.Service.Service;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.reactive.WebFluxPlayGround.Loader.RedisDataLoader;
 import com.reactive.WebFluxPlayGround.Model.Stock;
 import com.reactive.WebFluxPlayGround.Service.StockService;
 import java.io.IOException;
@@ -36,6 +39,10 @@ public class StockServiceTest {
     @Autowired
     private ResourceLoader resourceLoader;
 
+    //loader는 가져오면 안됨
+    @MockBean
+    private RedisDataLoader redisDataLoader; // 추가
+
     @Test
     public void getStocksTest() throws IOException {
         // Load the dummy data from JSON file
@@ -47,6 +54,8 @@ public class StockServiceTest {
             .thenReturn(Flux.just("stock:Test Stock"));
         when(reactiveValueOps.get("stock:Test Stock"))
             .thenReturn(Mono.just(stock));
+        when(reactiveValueOps.set(anyString(), any(Stock.class)))
+            .thenReturn(Mono.just(Boolean.TRUE));
 
         Flux<Stock> stocks = stockService.getStocks();
 
@@ -54,6 +63,7 @@ public class StockServiceTest {
             .expectNext(stock)
             .verifyComplete();
     }
+
 
     // ... other test cases ...
 }
