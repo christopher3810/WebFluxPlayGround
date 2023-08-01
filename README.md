@@ -48,6 +48,18 @@ podman run --name some-redis -p 6379:6379 -d docker.io/library/redis:latest
 
 해당 프로젝트의 application.yml 설정값에 redis port 값과 일치시켜줘야 합니다.
 
+### 📚 Log 경로
+
+---
+
+```text
+resource/logback.xml 
+```
+
+logback 설정 커스텀하면됨
+
+default는 `WebFluxLog/yyyy-MM-dd` 디렉토리에 `webfluxlog.log` 파일로 저장
+
 ## 📦 TestCode 실행시
 
 - 반드시 Redis Container를 Run 상태로 두고 실행시켜주세요
