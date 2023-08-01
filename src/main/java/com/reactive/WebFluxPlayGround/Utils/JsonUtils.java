@@ -2,7 +2,7 @@ package com.reactive.WebFluxPlayGround.Utils;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.reactive.WebFluxPlayGround.Exception.JsonProcessingException;
+import com.reactive.WebFluxPlayGround.Exception.JsonFileReadingException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
@@ -34,7 +34,7 @@ public class JsonUtils {
             Type type = typeToken.getType();
             return gson.fromJson(reader, type);
         } catch (IOException e) {
-            throw new JsonProcessingException("Failed to load JSON data from " + resourcePath, e);
+            throw new JsonFileReadingException("Failed to load JSON data from " + resourcePath, e, resourcePath);
         }
     }
 }
