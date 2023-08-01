@@ -2,6 +2,7 @@ package com.reactive.WebFluxPlayGround.Config;
 
 import com.reactive.WebFluxPlayGround.Model.Stock;
 import com.reactive.WebFluxPlayGround.Utils.GsonRedisserializer;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.ReactiveRedisConnectionFactory;
@@ -14,12 +15,18 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 @Configuration
 public class RedisConfig {
 
-    // Lettuce는 비동기로 Redis 서버에 연결하고 명령을 수행할 수 있는 Redis 클라이언트 라이브러리입니다.
-    // Spring Boot가 Reactive 프로그래밍과 함께 Redis를 지원하기 위해 Lettuce를 사용합니다.
-    // 여기서 생성한 LettuceConnectionFactory는 ReactiveRedisTemplate에 사용됩니다.
+    @Value("${spring.data.redis.host}")
+    private String redisHost;
+
+    @Value("${spring.data.redis.port}")
+    private int redisPort;
+
+    // Lettuce는 비동기로 Redis 서버에 연결하고 명령을 수행할 수 있는 Redis 클라이언트 라이브러리.
+    // Spring Boot가 Reactive 프로그래밍과 함께 Redis를 지원하기 위해 Lettuce를 사용.
+    // 여기서 생성한 LettuceConnectionFactory는 ReactiveRedisTemplate에 사용됨.
     @Bean
     public LettuceConnectionFactory lettuceConnectionFactory() {
-        return new LettuceConnectionFactory();
+        return new LettuceConnectionFactory(redisHost, redisPort);
     }
 
     @Bean
@@ -27,9 +34,9 @@ public class RedisConfig {
         return new GsonRedisserializer<>(Stock.class);
     }
 
-    // ReactiveRedisTemplate은 Reactive 스타일로 Redis 서버와 상호 작용할 수 있는 도구를 제공합니다.
-    // Spring Data Redis에서는 모든 Redis 작업을 위한 고수준 추상화를 제공하는데, 이를 사용하여 기본 Redis 기능에 접근하고 개별 도메인 모델에 맞게 데이터를 관리할 수 있습니다.
-    // 현재 프로젝트에서는 Stock 객체를 저장하고 검색하는 기능이 필요하므로, Generic Argument로 Stock 클래스를 사용하였습니다.
+
+    //LettuceConnectionFactory는 ReactiveRedisConnectionFactory의 구현체이며 Spring에서 주입시 참조함.
+    // 현재 프로젝트에서는 Stock 객체를 저장하고 검색하는 기능이 필요하므로, Generic Argument로 Stock 클래스를 사용.
     @Bean
     public ReactiveRedisTemplate<String, Stock> reactiveRedisTemplate(ReactiveRedisConnectionFactory factory, GsonRedisserializer<Stock> valueSerializer) {
         StringRedisSerializer keySerializer = new StringRedisSerializer();
